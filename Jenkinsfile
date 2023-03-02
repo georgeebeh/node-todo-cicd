@@ -12,7 +12,7 @@ pipeline {
                 sh 'docker build . -t georgeebeh/node-todo-test:latest'
             }
         }
-        stage('Push'){
+        /*stage('Push'){
             steps{
                 withCredentials([usernamePassword(credentialsId: 'dockerHub', passwordVariable: 'dockerHubPassword', usernameVariable: 'dockerHubUser')]) {
         	     sh "docker login -u ${env.dockerHubUser} -p ${env.dockerHubPassword}"
@@ -24,6 +24,6 @@ pipeline {
             steps{
                 sh "docker-compose down && docker-compose up -d"
             }
-        }
+        }*/
     }
 }
